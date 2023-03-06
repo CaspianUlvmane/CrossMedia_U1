@@ -1,18 +1,22 @@
 renderHeader();
 
 function renderHeader() {
-  let div = document.createElement("div");
-  div.id = "header";
-  div.append(burgerMenu());
-  document.querySelector("header").append(div, "Nordic Spirits");
+    let nameDiv = document.createElement("div")
+    nameDiv.classList.add("menuText")
+    nameDiv.textContent = "Nordic Spirits"
+
+  document.querySelector("header").append(burgerMenu(), nameDiv);
 }
 
 function burgerMenu() {
   let menu = document.createElement("div");
+  let menuBar = document.createElement("div");
   menu.id = "menu";
-  menu.style.display = "flex"
-  menu.style.flexDirection = "column"
-  menu.textContent = "Menu";
+  menu.style.display = "flex";
+  menu.style.flexDirection = "column";
+  let textMenu = document.createElement("div");
+  textMenu.textContent = "Menu";
+  textMenu.classList.add("menuText");
   let spiritArray = [
     "Troll",
     "Gårdstomte",
@@ -21,12 +25,19 @@ function burgerMenu() {
     "Mylingen",
   ];
 
+  menuBar.classList.add("menuBar");
+  menuBar.classList.add("hideMenu");
   spiritArray.forEach((element) => {
     let spiritDiv = document.createElement("div");
     spiritDiv.textContent = element;
-    spiritDiv.style.display = "none"
+    spiritDiv.classList.add("menuItem");
     spiritDiv.addEventListener("click", () => {});
-    menu.append(spiritDiv);
+    menuBar.append(spiritDiv);
   });
+
+  textMenu.addEventListener("click", () => {
+    menuBar.classList.toggle("hideMenu");
+  });
+  menu.append(textMenu, menuBar);
   return menu;
 }
