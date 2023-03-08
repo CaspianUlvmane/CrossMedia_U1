@@ -1,3 +1,5 @@
+import { scrollEvent } from "./functions.js";
+
 renderHeader();
 
 function renderHeader() {
@@ -28,11 +30,13 @@ function burgerMenu() {
   menuBar.classList.add("menuBar");
   menuBar.classList.add("hideMenu");
   spiritArray.forEach((element) => {
+    let linkBox = document.createElement("a");
+    linkBox.href = `spirit.php?spirit=${element}`
     let spiritDiv = document.createElement("div");
     spiritDiv.textContent = element;
-    spiritDiv.classList.add("menuItem");
-    spiritDiv.addEventListener("click", () => {});
-    menuBar.append(spiritDiv);
+    linkBox.classList.add("menuItem");
+    linkBox.append(spiritDiv)
+    menuBar.append(linkBox);
   });
 
   textMenu.addEventListener("click", () => {
@@ -41,3 +45,5 @@ function burgerMenu() {
   menu.append(textMenu, menuBar);
   return menu;
 }
+
+window.addEventListener("scroll", scrollEvent)
