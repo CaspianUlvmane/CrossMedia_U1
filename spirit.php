@@ -34,7 +34,8 @@ foreach ($spirits as $spiritObject) {
     #largeImg{background-image: url(./images/<?php echo $largeImg;?>)}
     #mediumImg{background-image: url(./images/<?php echo $mediumImg;?>);}
     #smallImg{background-image: url(./images/<?php echo $smallImg;?>);}
-    #bottomImg{background-image: url(./images/<?php echo $bottomImg;?>);}
+    #bottomImg{background-image: url(./images/<?php echo $bottomImg;?>);
+                min-height: 100vh;}
     </style>
     <header></header>
     <div id="largeImg" class="parallax"></div>

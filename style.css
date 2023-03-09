@@ -22,7 +22,7 @@ body{
 
 .parallax {
     /* Set a specific height */
-    min-height: 100vh;
+    min-height: 60vh;
     min-width: 100%;
   
     /* Create the parallax scrolling effect */
