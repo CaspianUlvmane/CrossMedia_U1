@@ -1,5 +1,10 @@
 body{
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
 }
 .forest{
     /* The image used */
@@ -18,6 +23,7 @@ body{
 .parallax {
     /* Set a specific height */
     min-height: 100vh;
+    min-width: 100%;
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -110,4 +116,23 @@ a {
 
 .hideMenu {
     left: calc(-100% - 5px);
+}
+
+#main{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    background-color: #16161d;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image{
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    max-width: 400px;
+    max-height: 400px;
+    background-position: center;
+    background-size: cover;
+    min-height: 400px;
 }

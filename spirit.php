@@ -7,7 +7,10 @@ $spirits = json_decode($json, true);
 
 foreach ($spirits as $spiritObject) {
     if($spiritObject["Name"] == $spirit){
-        $text = $spiritObject["Text"];
+        $textTop = $spiritObject["TextTop"];
+        $textMid = $spiritObject["TextMid"];
+        $largeImg = $spiritObject["ImageLarge"];
+        $mediumImg = $spiritObject["ImageMedium"];
     }
 }
 
@@ -23,9 +26,19 @@ foreach ($spirits as $spiritObject) {
     <title><?php echo $spirit?></title>
 </head>
 <body>
+    <style>
+        p{width: 50vw;
+        margin-top: 0px;}
+    #largeImage{background-image: url(./images/<?php echo $largeImg;?>)}
+    #mediumImg{background-image: url(./images/<?php echo $mediumImg;?>);}
+    </style>
     <header></header>
-    
-<p><?php echo $text?></p>
+    <div id="largeImage" class="parallax"></div>
+    <div id="main">
+        <div id="mediumImg" class="image"></div>
+        <p><?php echo $textTop?></p>
+    </div>
+    <div id="largeImage" class="parallax"></div>
 <script type="module" src="index.js"></script>
 </body>
 </html>
