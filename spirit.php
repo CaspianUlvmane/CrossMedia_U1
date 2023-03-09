@@ -39,6 +39,7 @@ foreach ($spirits as $spiritObject) {
     </style>
     <header></header>
     <div id="largeImg" class="parallax"></div>
+    <h1><?php echo $spirit ?></h1>
     <div id="main">
         <div id="mediumImg" class="image"></div>
         <p><?php echo $textTop?></p>

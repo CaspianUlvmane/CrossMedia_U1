@@ -136,3 +136,11 @@ a {
     background-size: cover;
     min-height: 400px;
 }
+
+h1{
+    position: absolute;
+    top: 290px;
+    font-size: xxx-large;
+    color: #D6E9B9;
+    text-shadow: 1px 1px 2px #16161d;
+}
