@@ -11,6 +11,8 @@ foreach ($spirits as $spiritObject) {
         $textMid = $spiritObject["TextMid"];
         $largeImg = $spiritObject["ImageLarge"];
         $mediumImg = $spiritObject["ImageMedium"];
+        $smallImg = $spiritObject["ImageSmall"];
+        $bottomImg = $spiritObject["ImageBottom"];
     }
 }
 
@@ -29,16 +31,23 @@ foreach ($spirits as $spiritObject) {
     <style>
         p{width: 50vw;
         margin-top: 0px;}
-    #largeImage{background-image: url(./images/<?php echo $largeImg;?>)}
+    #largeImg{background-image: url(./images/<?php echo $largeImg;?>)}
     #mediumImg{background-image: url(./images/<?php echo $mediumImg;?>);}
+    #smallImg{background-image: url(./images/<?php echo $smallImg;?>);}
+    #bottomImg{background-image: url(./images/<?php echo $bottomImg;?>);}
     </style>
     <header></header>
-    <div id="largeImage" class="parallax"></div>
+    <div id="largeImg" class="parallax"></div>
     <div id="main">
         <div id="mediumImg" class="image"></div>
         <p><?php echo $textTop?></p>
     </div>
-    <div id="largeImage" class="parallax"></div>
+    <div id="largeImg" class="parallax"></div>
+    <div id="main">
+        <p><?php echo $textMid?></p>
+        <div id="smallImg" class="image"></div>
+    </div>
+    <div id="bottomImg" class="parallax"></div>
 <script type="module" src="index.js"></script>
 </body>
 </html>
