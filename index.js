@@ -5,8 +5,10 @@ renderHeader();
 function renderHeader() {
     let nameDiv = document.createElement("div")
     nameDiv.classList.add("menuText")
-    nameDiv.textContent = "Nordic Spirits"
-
+    let mainlink = document.createElement("a")
+    mainlink.href = "index.html"
+    mainlink.textContent = "Nordic Spirits"
+    nameDiv.append(mainlink)
   document.querySelector("header").append(burgerMenu(), nameDiv);
 }
 

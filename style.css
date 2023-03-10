@@ -43,6 +43,7 @@ body{
 .filler{
     background-color: #16161d;
     height: 10vh;
+    width: 100%;
 }
 
 .textContent{
