@@ -18,6 +18,7 @@ function burgerMenu() {
   menu.style.flexDirection = "column";
   let textMenu = document.createElement("div");
   textMenu.textContent = "Menu";
+  textMenu.style.cursor = "pointer";
   textMenu.classList.add("menuText");
   let spiritArray = [
     "Troll",
