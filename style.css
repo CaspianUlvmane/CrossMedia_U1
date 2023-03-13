@@ -63,6 +63,7 @@ header{
     transition: opacity 300ms;
     font-size: x-large;
     top: 0;
+    font-family: 'Mirza', cursive;
 }
 
 p{
